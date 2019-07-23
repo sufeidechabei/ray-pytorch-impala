@@ -155,5 +155,3 @@ ImpalaTrainer = build_trainer(
     make_workers=defer_make_workers,
     make_policy_optimizer=make_aggregators_and_optimizer,
     mixins=[OverrideDefaultResourceRequest])
-
-
