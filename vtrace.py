@@ -343,23 +343,3 @@ def get_log_rhos(target_action_log_probs, behaviour_action_log_probs):
     b = torch.stack(behaviour_action_log_probs)
     log_rhos = torch.sum(t-b, dim=0)
     return log_rhos
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
