@@ -163,8 +163,6 @@ def build_vtrace_loss(policy, batch_tensors):
     def make_time_major(*args, **kw):
         return _make_time_major(policy, *args, **kw)
     actions = batch_tensors[SampleBatch.ACTIONS]
-    print("=========================================")
-    print(policy.model)
     logits, _, values, _ = policy.model({SampleBatch.CUR_OBS: batch_tensors[SampleBatch.CUR_OBS]}, [])
     policy.logits = logits
     dones = batch_tensors[SampleBatch.DONES]
@@ -292,9 +290,3 @@ VTraceTorchPolicy = build_torch_policy(
     extra_grad_process_fn=apply_grad_clipping,
     mixins=[ValueNetworkMixin]
     )
-
-
-
-
-
-
