@@ -17,5 +17,3 @@ for i in range(3000):
     if i % 100 == 0:
         checkpoint = trainer.save()
         print("checkpoint saved at", checkpoint)
-
-
